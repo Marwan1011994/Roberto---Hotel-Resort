@@ -1,0 +1,958 @@
+/* Start general rules */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s linear;
+}
+body{
+    font-size: 22px;
+    background: oldlace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+button{
+    border: none;
+}
+.container{
+    width: 1350px;
+    margin: auto;
+}
+.clear{
+    clear: both;
+}
+.left-div,.right-div{
+    width: 50%;
+    height:100%;
+}
+.my-contact,.nav img,.left-div{
+    float: left;
+}
+.icons,.nav ul,.right-div{
+    float: right;
+}
+.menue,.sub-menue li,.welcome-area,.welcome-area .center button,.aboutus-area{
+    position: relative;
+}
+.sub-menue,.sub-menue a::before,.welcome-area::before,.welcome-area .center,.welcome-area .center button::before{
+    position: absolute;
+}
+.sub-menue{
+    visibility: hidden;
+    opacity: 0;
+}
+/* End general rules */
+
+/* Start First Section for header-area */
+.header-area{
+    width: 100%;
+}
+
+/* start section 1 of header-area  */
+
+.info-icons{
+    background: #0e2737;
+    color:aliceblue;
+}
+.contact{
+    height: 60px;
+    line-height: 60px;
+}
+.contact a{
+    color:aliceblue;
+    margin-left: 10px;
+}
+.contact .merg-icon{
+    margin-right: 30px;
+}
+.contact a:hover{
+    color: rgba(240, 248, 255, 0.526);
+}
+
+/* end section 1 of header-area  */
+
+/* start section 2 of header-area  */
+.nav{
+    height: 100px;
+    line-height: 100px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.nav img{
+    margin:32px 0;
+}
+.nav ul li{
+    margin-left:32px;
+}
+.nav li a{
+    color: #2a303b;
+}
+.nav li a:hover,.sub-menue a:hover::before{
+    color: #afb4bf;
+}
+.nav li .bg-color{
+    background: #1cc3b2;
+    height: 100%;
+    padding: 0 20px;
+    color: #fff; 
+}
+.nav li .bg-color:hover{
+    background:#2a303b ;
+    color: #fff;
+}
+.sub-menue{
+    top:80px;
+    left: -25px;
+    background:#fff;
+    border-radius: 10px;
+    z-index: 10;
+}
+.menue:hover .sub-menue{
+    visibility:visible;
+    opacity: 1;
+}
+.sub-menue li{
+    display: block;
+    width: 200px;
+    padding: 15px 10px;
+    line-height: 30px;
+}
+.sub-menue li a{
+    color: #0e2737;
+    margin-left: 5px;
+}
+.sub-menue a::before{
+    content: "";
+    width: 10px;
+    height: 3px;
+    background: #0e2737;
+    left: 0;
+    top: 27px;
+}
+/* end section 2 of header-area  */
+
+/* start section 3 of header-area  */
+.welcome-area{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/pic-welcome.jpg);
+    background-size: cover;
+}
+.welcome-area::before{
+    content: "";
+    width: 100%;
+    height:100%;
+    background-color: #0e273760;
+}
+.welcome-area .center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 100px;
+    z-index: 5;
+    letter-spacing: 3px;
+    font-size: 24px;
+
+}
+.welcome-area .center h4{
+    text-transform: uppercase;
+}
+.welcome-area .center h1{
+    font-size: 65px;
+    letter-spacing: 1px;
+}
+.welcome-area .center button{
+    padding: 20px 60px;
+    font-size: 24px;
+    text-transform: capitalize;
+    background: none;
+    border: 2px solid #1cc3b2;
+}
+.welcome-area .center button::before{
+    content: "";
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index:-5;
+    background:#1cc3b2;
+    transition: 1s;
+}
+.welcome-area .center button:hover::before{
+    width: 100%;
+}
+.welcome-area .center button a{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/* end section 3 of header-area  */
+
+/* End First Section for header-area */
+
+/* Start second Section for aboutus-area */
+
+/* start section 1 of aboutus-area */
+.aboutus-area{
+    height: 900px;
+}
+.check-form{
+    width: 88%;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 10px ;
+    margin: auto;
+    text-transform: capitalize;
+    color: #0e2737;
+    position: absolute;
+    left: 6%;
+    top:-90px;
+}
+.check-form .in-put{
+    float: left;
+    margin-left: 80px;
+}
+ .in-put label{
+    display: block;
+    margin: 50px 0 15px;
+    color: #2a303b;
+ }
+ .in-put input{
+    display: inline-block;
+    height: 30px;
+    padding: 20px 5px;
+    font-size: 20px;
+    color: #495057;
+    border: 2px solid #1cc3b240;
+ }
+ .in-put input:focus{
+    outline: 2px solid #1cc3b2;
+ }
+ .in-put [type="date"]{
+    width: 200px;
+ }
+ .in-put [type="number"]{
+    width: 50px;
+    text-align: center;
+ }
+ .in-put + button{
+    float: left;
+    margin: 90px 0 0 50px;
+    width: 200px;
+    height: 45px;
+    font-size: 24px;
+    border: none;
+    background-color: #1cc3b270;
+    position: relative;
+    z-index: 5;
+    text-transform: capitalize;
+ }
+ .in-put + button::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index:-1;
+    background:#1cc3b2;
+    transition: 1s;
+}
+.in-put + button:hover::before{
+    width: 100%;
+}
+ .check-form a{
+    color: #fff;
+ }
+ .in-put + button::after{
+    content: "Availability";
+    color: #1cc3b2;
+    width: 0%;
+    height: 100%; 
+    position: absolute;
+    top: 120%;
+    left: 25%;
+    opacity: 0;
+    visibility: hidden;
+ }
+ .in-put + button:hover::after{
+    opacity: 1;
+    visibility: visible;
+ }
+/* end section 1 of aboutus-area */
+
+/* start section 2 of aboutus-area  */
+.aboutus-area .about-img{
+    position: relative;
+    top: 170px;
+    height: 475px;
+}
+/* .aboutus-area .about, .aboutus-area .img-about{
+    position: absolute;
+} */
+.aboutus-area .about{
+    width: 50%;
+    float: left;
+    text-transform: capitalize;
+}
+.about .title-about{
+    text-transform: uppercase;
+}
+.about h4{
+    color: #1cc3b2;
+}
+.about h2{
+    margin: 20px 0 60px;
+    color: #2a303b;
+}
+
+.about p{
+    line-height: 50px;
+    width: 95%;
+    text-align: justify;
+    margin-bottom: 40px;
+    color: #636a76;
+}
+.about h4 span{
+    margin-left: 5px;
+    color: #1cc3b280;
+}
+.about img{
+    margin: 25px 0 0 30px;
+    width: 200px;
+}
+
+.img-show{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.img-show .more-img{
+    width: 48%;
+    height: 47%;
+    float: left;
+    margin: 0 15px 22px 25px; 
+    position: relative;
+}
+
+.img-show img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.img-show .img3{
+    float: right;
+    margin: 0;
+    width: 45%;
+    height: 468px;
+}
+.img-show .more-img::before{
+    content: "";
+    width:100%;
+    height: 0;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#0e273760;
+}
+.img-show .more-img:hover::before{
+    height: 100%;
+    transition: 1s;
+}
+.img-show .more-img a{
+    color: #fff;
+    font-size: 65px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s;
+}
+.img-show .more-img:hover a{
+    opacity: 1;
+    visibility: visible;
+}
+/* end section 2 of aboutus-area  */
+
+/* start section 3 of aboutus-area */
+
+.aboutus-area .services{
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    text-align: center;
+    /* line-height: 100px; */
+    color: #0e2737;
+}
+.aboutus-area .services div{
+    width: 16%;
+    height: 180px;
+    float: left;
+    background: #fff;
+    padding-top: 40px;
+    position: relative;
+}
+.aboutus-area .services div::after{
+    content: "";
+    width: 0;
+    height: 0;
+    background: #0e273760;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 1s;
+}
+.aboutus-area .services div:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.aboutus-area .services .service-div{
+    margin-right:5%;
+}
+.aboutus-area .services i{
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+/* end section 3 of aboutus-area */
+
+/* end second Section for aboutus-area */
+/* start third Section for parent-price */
+
+.parent-price{
+    width: 100%;
+    height: 700px;
+    margin-top: 100px;
+    position: relative;
+}
+.parent-price .left-div img{
+    width: 100%;
+    height:100%;
+}
+.parent-price .right-div{
+    color: #fff;
+    font-size: 24px;
+    background: #0e2737;
+    line-height: 60px;
+    text-transform: capitalize;
+    position: relative;
+}
+.right-div .info-price{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+.right-div .info-price h2{
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+.right-div .info-price .mark-price{
+    font-size: 40px;
+    font-weight: 900;
+    color: #1cc3b2;
+    margin-right: 5px;
+}
+.right-div .info-price i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.right-div .space{
+    display: inline-block;
+    width: 170px;
+}
+.right-div .info-price button{
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.right-div .info-price a{
+    border-radius: 10px;
+    background: #1cc3b2;
+}
+.parent-price a{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+}
+.right-div .info-price a:hover{
+    color: #1cc3b2;
+    background: #fff;
+}
+.parent-price .pre-nxt{
+    width: 300px;
+    position: absolute;
+    background: #afa;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.parent-price .pre-nxt .previous,.parent-price .pre-nxt .next{
+    width: 50%;
+    text-align: center;
+}
+.parent-price .pre-nxt .previous{
+    float: left ;
+    background: #fff;
+}
+.parent-price .pre-nxt .previous a{
+    color: #0e2737;
+}
+.parent-price .pre-nxt .previous a:hover{
+    background: #1cc3b2;
+    color: #fff;
+}
+.parent-price .pre-nxt .next i{
+    margin-left: 5px;
+}
+.parent-price .pre-nxt .next a:hover {
+    background: #2a303b;
+}
+.parent-price .pre-nxt .next{
+    float: right;
+    background: #1cc3b2;
+}
+/* end third Section for parent-price */
+
+/* start fourth Section for testimonials */
+
+.testimonials{
+    height: 550px;
+    margin: 100px auto;
+    text-transform: capitalize;
+    
+}
+.testimonials .left-div{
+    height: 100%;
+}
+.testimonials .left-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.testimonials .right-div{
+    height: 100%;
+    padding: 20px 35px;
+}
+.testimonials .right-div h4{
+    color: #afb4bf;
+    text-transform: uppercase;
+   
+}
+.testimonials .right-div h2{
+    color: #0e2737;
+    margin: 20px 0 50px;
+    font-size: 42px;
+}
+.testimonials .right-div p{
+    color:  #636a76;
+    line-height: 40px;
+    text-align: justify;
+}
+.testimonials .right-div .five-star{
+    color: #f5b917;
+    margin: 20px 0;
+}
+.testimonials .right-div h5{
+    color: #0e2737;
+    margin: 30px 0 50px;
+}
+.testimonials .right-div h5 span{
+    color: #1cc3b2;
+    font-size: 14px;
+    font-weight: 600;
+}
+.testimonials .right-div ul{
+    float: left;
+}
+.testimonials .right-div a{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #c0c8d7;
+}
+.testimonials .right-div .active-li{
+    background: #495057;
+}
+
+/* End fourth Section for testimonials  */
+
+/* start fifth Section for external-services */
+
+.ex-services{
+    width: 100%;
+    height: 700px;
+}
+.ex-services > div{
+    width: 33.3334%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.ex-services div img{
+    width: 100%;
+    height: 100%;
+}
+.ex-services div .overlay{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    z-index: 5;
+    background: #00000070;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.ex-services div:hover .overlay{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .icons{
+    width: 0;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+    overflow: hidden;
+}
+.ex-services div:hover .icons{
+    width: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .icons a{
+    color: #fff;
+    font-size: 32px;
+    margin: 10px 0;
+}
+.ex-services div .info{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    transition: 1.5s;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.ex-services div:hover .info{
+    height: 350px;
+    opacity: 1;
+    visibility: visible;
+}
+.ex-services div .entertaiment{
+    width: 100%;
+    height: 250px;
+    background: #1cc3b2;
+    color: #fff;
+    padding: 20px;
+    line-height: 40px;
+}
+.ex-services div .entertaiment h3{
+    margin: 10px 0;
+}
+.ex-services div .info a{
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    line-height: 100px;
+    background: #0e2737;
+}
+/* End fifth Section for external-services */
+
+/* start sixth Section for latest-news */
+
+.latest-news{
+    height: 850px;
+    color: #0e2737;
+    margin-top: 100px;
+    padding-top: 25px;
+    text-align: center;
+}
+.latest-news h5{
+    color: #1cc3b2;
+}
+.latest-news h2{
+    margin: 15px 0 60px;
+}
+.latest-news div{
+    width: 30%;
+    height: 500px;
+    color: #636a76;
+    float: left;
+    text-align:justify;
+    transition: 1s;
+}
+.latest-news div:hover{
+    transform: translate(0,-15px);
+}
+.latest-news div img{
+    width: 100%;
+    height: 50%;
+}
+.latest-news div h6{
+    text-transform: uppercase;
+    margin: 30px 0 15px;
+}
+.latest-news div h4{
+    color: #0e2737;
+    margin-bottom: 15px;
+}
+.latest-news div:hover h4{
+    color: #636a76;
+}
+.latest-news div p{
+    line-height: 35px;
+    height: 150px;
+}
+.latest-news div a{
+    color: #636a76;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.latest-news div a:hover{
+    color: #0e2737;
+}
+
+.latest-news .center{
+    margin: 0 5%;
+}
+
+ /* End sixth Section for latest-news */
+
+ /* start seventh Section for contact-us */
+
+ .contact-us{
+    height: 400px;
+    background-image: url(../images/img-contact-us.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-transform: capitalize;
+    position: relative;
+ }
+ .contact-us::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000bc;
+ }
+ .contact-us .followers, .contact-us .info-contact{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+}
+.contact-us .followers{
+     top: 0;
+ }
+ .contact-us .followers div{
+    float: left;
+    width: 20%;
+    height: 100px;
+    line-height: 30px;
+    text-align: center;
+    margin: 50px 30px;
+ }
+ .contact-us .followers div i{
+    font-size: 35px;
+ }
+ .contact-us .followers div span{
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 15px;
+ }
+.contact-us .info-contact{
+    bottom: 0;
+    padding: 60px;
+}
+.contact-us .info-contact div{
+    float: left;
+}
+.contact-us .info-contact span{
+    font-size: 48px;
+    font-weight: bold;
+}
+.contact-us .info-contact p{
+    margin-top: 10px;
+}
+.contact-us .info-contact .contact-now{
+    float: right;
+}
+.contact-us .info-contact .contact-now a{
+    width: 300px;
+    font-size: 28px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 20px;
+    background: #1cc3b2;
+    border-radius: 10px;
+}
+.contact-us .info-contact .contact-now a:hover{
+    color: #1cc3b2;
+    background: #fff;
+}
+
+ /* End seventh Section for contact-us */
+
+ /* start eighth Section for partner-logo */
+
+ .partner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+ }
+ .partner a{
+    width: 12%;
+    float: left;
+}
+.partner .last{
+    text-align: right;
+ }
+ .partner .center{
+    margin: 0 6.6%;
+    text-align: center;
+ }
+
+ /* End eighth Section for partner-logo */
+
+ /* start ninth Section for footer  */
+
+ .footer{
+    width: 100%;
+    height: 460px;
+    color: #fff;
+    background: #0e2737;
+    padding-top: 80px;
+    position: relative;
+}
+.footer .container div{
+    float: left;
+}
+.footer .info-site,.footer .our-blog,.footer .links-site{
+    width: 22%;
+    height: 250px;
+    margin-bottom: 80px;
+}
+.footer .info-site{
+    color: #afb4bf;
+}
+.footer .info-site h3{
+    margin: 15px 0 5px;
+}
+.footer .info-site span,.footer .info-site p{
+    font-size: 14px;
+}
+.footer .info-site p{
+    margin-top: 15px;
+    line-height: 25px;
+}
+.footer .our-blog h6{
+    margin: 35px 0 5px;
+}
+.footer .our-blog p{
+    font-size: 14px;
+    color: #afb4bf;
+}
+.footer .links-site a{
+    display: block;
+    margin: 15px 0;
+    color: #636a76;
+}
+.footer .links-site a:hover{
+    color: #fff;
+}
+.footer .subscribe{
+ width: 34%;
+ height: 250px;
+ margin-bottom: 80px;
+}
+.footer .subscribe p{
+    margin: 30px 0;
+}
+.footer .subscribe form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.footer .subscribe input{
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 22px;
+    background: #3e525f;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+}
+.footer .subscribe button{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: #1cc3b2;
+    border-radius: 50%;
+    top: 0;
+    right: 1px;
+}
+.footer .subscribe button:hover{
+    background: #2a303b;
+}
+.footer .subscribe i{
+    color: #fff;
+    font-size: 24px;
+}
+.footer hr{
+    border: 1px solid #636a76;
+    margin-bottom: 10px;
+}
+.footer .copyright p{
+    width: 89%;
+    display: inline-block;
+    font-size: 14px;
+    color: #afb4bf;
+}
+.footer .copyright {
+    width: 100%;
+}
+.footer .copyright a{
+    width: 2%;
+    font-size: 14px;
+    color: #1cc3b2;
+}
+.footer .copyright a:hover{
+    color: #fff;
+}
+ /* end ninth Section for footer */
