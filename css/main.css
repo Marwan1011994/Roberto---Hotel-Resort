@@ -8,6 +8,7 @@
 }
 body{
     font-size: 22px;
+    height: fit-content;
     background: oldlace;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -33,21 +34,11 @@ button{
     width: 50%;
     height:100%;
 }
-.my-contact,.nav img,.left-div{
+.left-div{
     float: left;
 }
-.icons,.nav ul,.right-div{
+.right-div{
     float: right;
-}
-.menue,.sub-menue li,.welcome-area,.welcome-area .center button,.aboutus-area{
-    position: relative;
-}
-.sub-menue,.sub-menue a::before,.welcome-area::before,.welcome-area .center,.welcome-area .center button::before{
-    position: absolute;
-}
-.sub-menue{
-    visibility: hidden;
-    opacity: 0;
 }
 /* End general rules */
 
@@ -58,20 +49,27 @@ button{
 
 /* start section 1 of header-area  */
 
-.info-icons{
+.parent{
     background: #0e2737;
     color:aliceblue;
 }
 .contact{
     height: 60px;
     line-height: 60px;
+    overflow: hidden;
+}
+.my-contact{
+    float: left;
+}
+.icons{
+    float: right;
 }
 .contact a{
     color:aliceblue;
-    margin-left: 10px;
+    margin: 0 30px 0 10px;
 }
-.contact .merg-icon{
-    margin-right: 30px;
+.contact  .instagram{
+    margin: 0 0 0 10px;
 }
 .contact a:hover{
     color: rgba(240, 248, 255, 0.526);
@@ -87,7 +85,11 @@ button{
     font-weight: 500;
 }
 .nav img{
+    float: left;
     margin:32px 0;
+}
+.nav ul{
+    float: right;
 }
 .nav ul li{
     margin-left:32px;
@@ -95,24 +97,31 @@ button{
 .nav li a{
     color: #2a303b;
 }
-.nav li a:hover,.sub-menue a:hover::before{
+.nav li a:hover{
     color: #afb4bf;
 }
 .nav li .bg-color{
     background: #1cc3b2;
-    height: 100%;
+    height: 100px;
     padding: 0 20px;
-    color: #fff; 
+    color: #fff;
+   
 }
 .nav li .bg-color:hover{
     background:#2a303b ;
     color: #fff;
 }
+.menue{
+    position: relative;
+}
 .sub-menue{
+    position: absolute;
     top:80px;
     left: -25px;
     background:#fff;
     border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
     z-index: 10;
 }
 .menue:hover .sub-menue{
@@ -124,6 +133,7 @@ button{
     width: 200px;
     padding: 15px 10px;
     line-height: 30px;
+    position: relative;
 }
 .sub-menue li a{
     color: #0e2737;
@@ -134,8 +144,12 @@ button{
     width: 10px;
     height: 3px;
     background: #0e2737;
+    position: absolute;
     left: 0;
     top: 27px;
+}
+.sub-menue a:hover::before{
+    background: #afb4bf;
 }
 /* end section 2 of header-area  */
 
@@ -145,14 +159,17 @@ button{
     height: 100vh;
     background-image: url(../images/pic-welcome.jpg);
     background-size: cover;
+    position: relative;
 }
 .welcome-area::before{
     content: "";
     width: 100%;
     height:100%;
+    position: absolute;
     background-color: #0e273760;
 }
 .welcome-area .center{
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -178,11 +195,13 @@ button{
     text-transform: capitalize;
     background: none;
     border: 2px solid #1cc3b2;
+    position: relative;
 }
 .welcome-area .center button::before{
     content: "";
     width: 0;
     height: 100%;
+    position: absolute;
     bottom: 0;
     left: 0;
     z-index:-5;
@@ -206,6 +225,7 @@ button{
 
 /* start section 1 of aboutus-area */
 .aboutus-area{
+    position: relative;
     height: 900px;
 }
 .check-form{
@@ -213,12 +233,12 @@ button{
     height: 180px;
     background-color: #fff;
     border-radius: 10px ;
-    margin: auto;
     text-transform: capitalize;
     color: #0e2737;
     position: absolute;
     left: 6%;
     top:-90px;
+    overflow: hidden;
 }
 .check-form .in-put{
     float: left;
@@ -259,11 +279,14 @@ button{
     z-index: 5;
     text-transform: capitalize;
  }
- .in-put + button::before{
+ .in-put + button::before, .in-put + button::after{
     content: "";
     width: 0%;
     height: 100%;
     position: absolute;
+ }
+
+ .in-put + button::before{
     bottom: 0;
     left: 0;
     z-index:-1;
@@ -279,9 +302,6 @@ button{
  .in-put + button::after{
     content: "Availability";
     color: #1cc3b2;
-    width: 0%;
-    height: 100%; 
-    position: absolute;
     top: 120%;
     left: 25%;
     opacity: 0;
@@ -298,13 +318,9 @@ button{
     position: relative;
     top: 170px;
     height: 475px;
+    overflow: hidden;
 }
-/* .aboutus-area .about, .aboutus-area .img-about{
-    position: absolute;
-} */
 .aboutus-area .about{
-    width: 50%;
-    float: left;
     text-transform: capitalize;
 }
 .about .title-about{
@@ -334,16 +350,11 @@ button{
     width: 200px;
 }
 
-.img-show{
-    width: 50%;
-    height: 100%;
-    float: right;
-}
 .img-show .more-img{
     width: 48%;
     height: 47%;
     float: left;
-    margin: 0 15px 22px 25px; 
+    margin-bottom: 4%; 
     position: relative;
 }
 
@@ -355,8 +366,8 @@ button{
 .img-show .img3{
     float: right;
     margin: 0;
-    width: 45%;
-    height: 468px;
+    width: 46%;
+    height: 100%;
 }
 .img-show .more-img::before{
     content: "";
