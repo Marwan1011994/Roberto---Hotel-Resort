@@ -40,6 +40,14 @@ button{
 .right-div{
     float: right;
 }
+.welcome-area::before,.contact-us::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
 /* End general rules */
 
 /* Start First Section for header-area */
@@ -49,7 +57,7 @@ button{
 
 /* start section 1 of header-area  */
 
-.parent{
+.info-icons{
     background: #0e2737;
     color:aliceblue;
 }
@@ -162,10 +170,6 @@ button{
     position: relative;
 }
 .welcome-area::before{
-    content: "";
-    width: 100%;
-    height:100%;
-    position: absolute;
     background-color: #0e273760;
 }
 .welcome-area .center{
@@ -407,7 +411,6 @@ button{
     bottom: 0;
     left: 6%;
     text-align: center;
-    /* line-height: 100px; */
     color: #0e2737;
 }
 .aboutus-area .services div{
@@ -458,7 +461,7 @@ button{
     color: #fff;
     font-size: 24px;
     background: #0e2737;
-    line-height: 60px;
+    line-height: 200%;
     text-transform: capitalize;
     position: relative;
 }
@@ -767,12 +770,6 @@ button{
     position: relative;
  }
  .contact-us::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     background: #000000bc;
  }
  .contact-us .followers, .contact-us .info-contact{
@@ -790,12 +787,15 @@ button{
     float: left;
     width: 20%;
     height: 100px;
-    line-height: 30px;
+    line-height: 175%;
     text-align: center;
-    margin: 50px 30px;
+    margin: 4% 2.5%;
  }
  .contact-us .followers div i{
     font-size: 35px;
+ }
+ .contact-us .info-cont-now{
+    width: 70%;
  }
  .contact-us .followers div span{
     display: block;
@@ -805,7 +805,7 @@ button{
  }
 .contact-us .info-contact{
     bottom: 0;
-    padding: 60px;
+    padding: 5%;
 }
 .contact-us .info-contact div{
     float: left;
@@ -818,10 +818,12 @@ button{
     margin-top: 10px;
 }
 .contact-us .info-contact .contact-now{
+    width: 25%;
+    margin-left: 5%;
     float: right;
 }
 .contact-us .info-contact .contact-now a{
-    width: 300px;
+    width: 100%;
     font-size: 28px;
     margin-top: 10px;
     text-transform: capitalize;
@@ -950,7 +952,7 @@ button{
     margin-bottom: 10px;
 }
 .footer .copyright p{
-    width: 89%;
+    width: 75%;
     display: inline-block;
     font-size: 14px;
     color: #afb4bf;
@@ -958,8 +960,14 @@ button{
 .footer .copyright {
     width: 100%;
 }
+.footer .copyright .links-footer{
+    width: 25%;
+    float: right;
+    text-align: end;
+}
 .footer .copyright a{
-    width: 2%;
+    width: 3%;
+    margin-left: 4%;
     font-size: 14px;
     color: #1cc3b2;
 }
